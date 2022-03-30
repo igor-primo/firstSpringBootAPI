@@ -12,10 +12,10 @@ import lombok.ToString;
 
 public class RegistrationRequest {
 
-	private String firstName;
-	private String lasttName;
-	private String email;
-	private String password;
+	private String firstName = "Igor";
+	private String lasttName = "Primo";
+	private String email = "igorprimo@gmail.com";
+	private String password = "123456";
 
 
 }

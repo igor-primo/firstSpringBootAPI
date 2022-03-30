@@ -17,12 +17,18 @@ import lombok.AllArgsConstructor;
 @Configuration
 @AllArgsConstructor
 @EnableWebSecurity
-
 public class WebSecurityConfig
 	extends WebSecurityConfigurerAdapter{
 
 	private AppUserService appUserService;
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+	WebSecurityConfig(){
+
+		this.appUserService = new AppUserService();
+		this.bCryptPasswordEncoder = new BCryptPasswordEncoder();
+
+	}
 
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
